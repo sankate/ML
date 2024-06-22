@@ -174,6 +174,8 @@ Impurity measures are used to decide the best way to split the data at each node
 ## Classification Metrics: Accuracy, Precision, Recall, and F1-score
 
 In the context of machine learning, classification metrics are used to evaluate the performance of classification models. Here's a detailed explanation of four commonly used metrics: Accuracy, Precision, Recall, and F1-score.
+Confusion in classifying the data can be shown by a matrix called the Confusion Matrix. From the confusion matrix, we can obtain different measures like Accuracy, Precision, Recall, and F1 scores.
+![Confusion \matrix.png "Confusion matrix"](https://github.com/sankate/ML/blob/main/Confusion%20matrix.png)
 
 ### 1. Accuracy
 
