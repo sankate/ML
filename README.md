@@ -3,6 +3,7 @@
 ## Table of Contents
 1. [Linear Regression Algorithm](#linear-regression-algorithm)
 2. [Introduction to Decision Tree](#introduction-to-decision-tree)
+3. [Accuracy, Recall, Precision and F-1 score](#classification-metrics-accuracy-precision-recall-and-f1-score)
 
 
 ## Linear Regression Algorithm
@@ -168,3 +169,62 @@ Impurity measures are used to decide the best way to split the data at each node
 - [Scikit-Learn Documentation](https://scikit-learn.org/stable/modules/tree.html)
 - [Wikipedia on Decision Tree Learning](https://en.wikipedia.org/wiki/Decision_tree_learning)
 - [Towards Data Science - Decision Trees](https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052)
+
+
+## Classification Metrics: Accuracy, Precision, Recall, and F1-score
+
+In the context of machine learning, classification metrics are used to evaluate the performance of classification models. Here's a detailed explanation of four commonly used metrics: Accuracy, Precision, Recall, and F1-score.
+
+### 1. Accuracy
+
+**Definition**: Accuracy is the ratio of correctly predicted instances to the total instances. It is a straightforward metric to understand and calculate but can be misleading if the data is imbalanced.
+
+$$ \text{Accuracy} = \frac{\text{True Positives (TP)} + \text{True Negatives (TN)}}{\text{Total Population}}$$
+
+**Usage**: Accuracy is useful when the classes are balanced, meaning there are roughly equal numbers of instances in each class.
+
+**Example**: If a model correctly predicts 90 out of 100 instances, the accuracy is 90%.
+
+### 2. Precision
+
+**Definition**: Precision is the ratio of correctly predicted positive observations to the total predicted positives. It measures the accuracy of the positive predictions.
+
+$$\text{Precision} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Positives (FP)}}$$
+
+**Usage**: Precision is particularly useful in scenarios where the cost of false positives is high. For instance, in email spam detection, high precision means fewer legitimate emails are incorrectly labeled as spam.
+
+**Example**: If a model identifies 70 true positives out of 100 predicted positives, the precision is 70%.
+
+### 3. Recall (Sensitivity or True Positive Rate)
+
+**Definition**: Recall is the ratio of correctly predicted positive observations to the all observations in the actual class. It measures the ability of the model to find all relevant cases.
+
+$$\text{Recall} = \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}}$$
+
+**Usage**: Recall is important when the cost of false negatives is high. For instance, in medical diagnosis, high recall ensures that most of the actual positive cases are identified.
+
+**Example**: If a model identifies 70 true positives out of 80 actual positives, the recall is 87.5%.
+
+### 4. F1-score
+
+**Definition**: The F1-score is the harmonic mean of precision and recall. It provides a single metric that balances both precision and recall, making it useful when you need a balance between the two.
+
+$$\text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
+
+**Usage**: The F1-score is useful when you need to balance precision and recall, especially in situations with imbalanced datasets.
+
+**Example**: If the precision is 0.7 and the recall is 0.8, the F1-score is:
+
+$$\text{F1-score} = 2 \times \frac{0.7 \times 0.8}{0.7 + 0.8} \approx 0.75$$
+
+### Practical Considerations
+
+- **Imbalanced Data**: When dealing with imbalanced data, accuracy may not be the best metric as it can be misleading. Metrics like precision, recall, and the F1-score can provide more insight into the model's performance.
+- **Choice of Metric**: The choice of metric depends on the specific problem and the costs associated with false positives and false negatives. For instance, in fraud detection, false negatives (missing a fraud case) might be more costly than false positives.
+
+### Sources
+- [Scikit-Learn Documentation](https://scikit-learn.org/stable/modules/model_evaluation.html)
+- [Wikipedia on Precision and Recall](https://en.wikipedia.org/wiki/Precision_and_recall)
+- [Towards Data Science - Evaluation Metrics](https://towardsdatascience.com/evaluation-metrics-for-classification-4256f54e18af)
+
+These metrics provide different insights into the performance of a classification model, and the best choice often depends on the specific context and goals of the analysis.
