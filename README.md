@@ -4,6 +4,7 @@
 1. [Linear Regression Algorithm](#linear-regression-algorithm)
 2. [Introduction to Decision Tree](#introduction-to-decision-tree)
 3. [Accuracy, Recall, Precision and F-1 score](#classification-metrics-accuracy-precision-recall-and-f1-score)
+4. [K-Mean Clustering](#k-means-clustering)
 
 
 ## Linear Regression Algorithm
