@@ -36,3 +36,5 @@ Let’s say we have 100 observations in the data. The probability of a random ob
 $$(1 - 1 / 100)^100  = (1 - 0.01)^100  = 0.99100  = 0.366 $$
 
 Hence the probability of a random observations getting selected in a bootstrap sample of size 100, in 100 trials is = `1 - 0.366 = 0.634`
+
+(Introduction to Bagging and Ensemble Methods | Paperspace Blog.pdf)[https://github.com/sankate/ML/blob/main/Introduction%20to%20Bagging%20and%20Ensemble%20Methods%20%7C%20Paperspace%20Blog.pdf]
